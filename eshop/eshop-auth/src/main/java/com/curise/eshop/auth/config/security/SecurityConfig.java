@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * 〈security配置〉
+ * 〈security配置〉 SecurityConfig优先于ResourceServerConfig
  *
  * @author Curise
  * @create 2018/12/13
@@ -33,6 +33,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new NoEncryptPasswordEncoder();
     }
 
+    /**
+     *  SecurityConfig 用于保护oauth要开放的资源，同时主要作用于client端以及token的认证(Bearer auth)
+     *  SecurityConfig 不拦截oauth要开放的资源
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.requestMatchers().antMatchers("/oauth/**")

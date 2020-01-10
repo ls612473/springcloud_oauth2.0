@@ -19,6 +19,11 @@ import javax.servlet.http.HttpServletResponse;
 @EnableResourceServer
 @Order(3)
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
+    /**
+     * 在ResourceServerConfig 中配置需要token验证的资源
+     * @param http
+     * @throws Exception
+     */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
