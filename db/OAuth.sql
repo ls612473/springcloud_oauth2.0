@@ -64,3 +64,8 @@ create table ClientDetails (
   additionalInformation VARCHAR(4096),
   autoApproveScopes VARCHAR(256)
 );
+
+INSERT INTO `oauth_client_details` (`client_id`, `resource_ids`, `client_secret`, `scope`, `authorized_grant_types`, `web_server_redirect_uri`, `authorities`, `access_token_validity`, `refresh_token_validity`, `additional_information`, `autoapprove`, `origin_secret`) VALUES ('app', '', '$2a$10$88IWBHS3PUn9.NSeA1cMbeotMCbc2tOposnW7efm4ed1T4ZCay2ei', 'all', 'password,refresh_token', '', NULL, '86400', '8640000', NULL, '1', '123456');
+INSERT INTO `oauth_client_details` (`client_id`, `resource_ids`, `client_secret`, `scope`, `authorized_grant_types`, `web_server_redirect_uri`, `authorities`, `access_token_validity`, `refresh_token_validity`, `additional_information`, `autoapprove`, `origin_secret`) VALUES ('febs', NULL, '$2a$10$aSZTvMOtUAYUQ.75z2n3ceJd6dCIk9Vy3J/SKZUE4hBLd6sz7.6ge', 'all', 'password,refresh_token', NULL, NULL, '86400', '8640000', NULL, '1', '123456');
+INSERT INTO `oauth_client_details` (`client_id`, `resource_ids`, `client_secret`, `scope`, `authorized_grant_types`, `web_server_redirect_uri`, `authorities`, `access_token_validity`, `refresh_token_validity`, `additional_information`, `autoapprove`, `origin_secret`) VALUES ('swagger', '', '$2a$10$HSXh7gb19pngr8gcvzkODOvhQ048m6mrlXtaHJmBUE2jca7RvjEBa', 'test', 'password,refresh_token', '', NULL, '86400', '86400', '', '0', '123456');
+
